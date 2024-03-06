@@ -36,8 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 120,
         centerTitle: true,
-        title: const Text('Primeiro App em Flutter'),
+        title: const Text(
+          'Primeiro App em Flutter',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Column(
@@ -50,7 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: const TextStyle(fontSize: 100),
+              style: const TextStyle(
+                fontSize: 100,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -58,9 +70,15 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
+        shape: const CircleBorder(),
+        backgroundColor: Colors.lightBlue,
+        foregroundColor: Colors.white,
         child: const Icon(Icons.add),
       ),
-      bottomSheet: Container(height: 50, color: Colors.blue,),
+      bottomSheet: Container(
+        height: 50,
+        color: Colors.blue,
+      ),
     );
   }
 }
